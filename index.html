@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>U-help</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
-    />
-    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -20,10 +16,10 @@
 
   <body>
     <!-- page header -->
-    <div class="container" id="home">
-      <div class="col-12 text-center">
+    <div class="container" id="home" style="height: 140px;" >
+      <div class="row justify-content-center" style="height: 140px">
         <div class="tm-page-header">
-          <h1 class="d-inline-block text-uppercase">U-Help</h1>
+          <div class="title">U-HELP</div>
         </div>
       </div>
     </div>
@@ -52,7 +48,7 @@
                       >Inicio <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#activities">Principios</a>
+                    <a class="nav-link" href="#principles">Principios</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#company">Nosotros</a>
@@ -70,7 +66,7 @@
 
     <!-- Parallax Section -->
     <div>
-    <section class="tm-parallax" id="tmVideoSection">
+    <section class="tm-parallax" style="height: 750px">
       <div class="container tm-banner-text-container">
         <div class="row">
           <div class="col-12">
@@ -82,18 +78,21 @@
       </div>
     </section>
   </div>
-    <!-- Activities -->
-    <div class="container" id="activities">
+    <!-- Principios -->
+    <div class="container" id="principles">
       <div class="row">
-        <div class="col-12">
-          <div class="tm-principles">
+        <div class="col-12" style="margin-top: 70px">
+          <div>
             <header >
-              <h2 class="">Principios</h2>
+              <h2> Nuestros Principios</h2>
+              <div class="tm-principles">
+
+              </div>
             </header>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-lg-6">
           <div class="tm-activity-block">
             <div class="tm-activity-img-container">
@@ -101,7 +100,7 @@
             </div>
             <div class="tm-activity-block-text">
               <h3 class="tm-text-blue">ENFOQUE</h3>
-              <p>
+              <p class="tm-text-black">
                 Tenemos un enfoque en el ámbito de la ayuda universitaria.
                 Generara aceptación por parte de los estudiantes de la UPC y del publico en general.
               </p>
@@ -115,8 +114,8 @@
             </div>
             <div class="tm-activity-block-text">
               <h3 class="tm-text-blue">INTERFAZ AMIGABLE</h3>
-              <p>
-                Contamos con una interfaz intuitiva y amigable, evidencia en diferentes aspectos como los colores y formas agradables a la vista del usuario.
+              <p class="tm-text-black">
+                Contamos con una interfaz intuitiva y amigable, evidenciada en diferentes aspectos como los colores y formas llamativas.
               </p>
             </div>
           </div>
@@ -128,23 +127,8 @@
             </div>
             <div class="tm-activity-block-text">
               <h3 class="tm-text-blue">SEGURIDAD </h3>
-              <p>
+              <p class="tm-text-black">
                 Brindamos seguridad a todos los estudiantes de la UPC. Garantizamos una constante protección de sus datos personales y su cuenta.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="tm-activity-block mr-lg-0 ml-lg-auto">
-            <div class="tm-activity-img-container">
-              <img src="img/img-04.jpg" alt="Image" class="tm-activity-img" />
-            </div>
-            <div class="tm-activity-block-text">
-              <h3 class="tm-text-blue">Lorem ipsum dolor sit amet</h3>
-              <p>
-                Orci varius natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Sed eu turpis nec sem lacinia
-                condimentum et a orci.
               </p>
             </div>
           </div>
@@ -162,6 +146,7 @@
             <div class="tm-company-about-text">
               <header>
                 <h2 class="tm-company-about-header">Nosotros</h2>
+                <div class="tm-principles"></div>
               </header>
               <p>
                 U-Help es una aplicación académica de ayuda universitaria, donde los estudiantes pueden buscar lugares donde
@@ -191,7 +176,7 @@
                   role="tab"
                   aria-controls="vision"
                   aria-selected="true"
-                  >Vision</a
+                  > Vision</a
                 >
               </li>
               <li class="nav-item">
@@ -340,14 +325,6 @@
           var rv = ua.indexOf("rv:");
           return parseInt(ua.substring(rv + 3, ua.indexOf(".", rv)), 10);
         }
-
-        // var edge = ua.indexOf('Edge/');
-        // if (edge > 0) {
-        //     // Edge (IE 12+) => return version number
-        //     return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-        // }
-
-        // other browser
         return false;
       }
 
@@ -403,7 +380,7 @@
         }
 
         // Make sticky header
-        if ($(this).scrollTop() > 158) {
+        if ($(this).scrollTop() > 140) {
           $(".tm-nav-section").addClass("sticky");
         } else {
           $(".tm-nav-section").removeClass("sticky");
@@ -457,7 +434,7 @@
         });
 
         // Parallax image background
-        background_image_parallax($(".tm-parallax"), 0.4);
+        background_image_parallax($(".tm-parallax"));
 
         // Back to top
         $(".scroll").click(function() {

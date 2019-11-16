@@ -1,6 +1,6 @@
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Arvo', serif;
   font-size: 17px;
 
   background-color: #1f2b3a;
@@ -9,7 +9,7 @@ body {
 }
 
 textarea {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Arvo', serif;
 }
 
 a:hover {
@@ -45,8 +45,9 @@ p {
 p:last-child {
   margin-bottom: 0;
 }
-
 .tm-page-header {
+  font-family: 'Arvo', serif;
+  font-size: 2em;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,12 +58,13 @@ p:last-child {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 55px;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .tm-nav-section {
   position: absolute;
-  top: 158px;
+  top: 140px;
   left: 0;
   width: 100%;
   border-top: 1px solid #909090;
@@ -117,7 +119,7 @@ p:last-child {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   margin-top: 74px;
 }
@@ -133,7 +135,7 @@ p:last-child {
 
 .tm-banner-text-container {
   backgorund-color:rgba(0,0,0,0.7);
-  position: relative;
+  position: absolute;
   z-index: 1000;
   color: white;
   text-align: center;
@@ -202,12 +204,15 @@ p:last-child {
   height: 110%;
   background-image: url(../img/img-upc.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 60px;
+  background-size:cover;
+  margin-bottom: 6px;
   position: relative;
 }
 .tm-principles{
-
+  height: 10px;
+  width: 100px;
+  background-color: rgba(234,209,64,5);
+  margin-bottom: 20px;
 }
 
 .tm-parallax-header {
@@ -223,18 +228,22 @@ p:last-child {
 .tm-text-blue {
   color: #108ac1;
 }
+.tm-text-black {
+  color: black;
+}
 
 .tm-activity-block {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #c7c7c7;
+  border: 1px solid rgba(234,209,64,5);
+  background-color: white;
   padding: 30px 20px;
   margin-bottom: 38px;
 }
-tm-activity-block:hover{
-
+.tm-activity-block:hover{
+  transform: scale(1.05);
 }
 
 .tm-activity-block-text {
@@ -426,7 +435,18 @@ figure {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
 }
-
+.title{
+  text-align: center;
+  vertical-align: center;
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 100px;
+  width: 250px;
+  height: 100px;
+  color: rgb(34,44,46);
+  background-color: rgba(234,209,64,5);
+}
 .tab-pane.fade {
   transition: opacity 0s linear;
 }
